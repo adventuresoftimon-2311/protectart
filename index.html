@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>United Creatives - Protect Art</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>United Creatives.</h1>
+      <p>A United Creatives Movement.</p>
+    </header>
+
+    <main class="bento-grid">
+      <!-- 1. Protect Art -->
+      <div class="pane pane-protect" data-id="protect">
+        <div class="pane-bg" style="background-image: url('assets/protect-art.png'); background-color: #222;"></div>
+        <div class="pane-content">
+          <h2>Protect Art.</h2>
+          <p>Art is not content. It is intellectual property.</p>
+        </div>
+      </div>
+
+      <!-- 2. See Your Art -->
+      <div class="pane pane-see" data-id="see">
+        <div class="pane-bg" style="background-image: url('assets/see-art.png'); background-color: #333;"></div>
+        <div class="pane-content">
+          <h2>See your art.</h2>
+          <p>Know where your work lives.</p>
+        </div>
+      </div>
+
+      <!-- 3. Gallery -->
+      <div class="pane pane-gallery" data-id="gallery">
+        <div class="pane-bg" style="background-image: url('assets/gallery.png'); background-color: #333;"></div>
+        <div class="pane-content">
+          <h2>Gallery.</h2>
+          <p>Shown. Credited. Respected.</p>
+        </div>
+      </div>
+
+      <!-- 4. The Movement -->
+      <div class="pane pane-movement" data-id="movement">
+        <div class="pane-bg" style="background-image: url('assets/movement.png'); background-color: #333;"></div>
+        <div class="pane-content">
+          <h2>The movement.</h2>
+          <p>Protect art. Together.</p>
+        </div>
+      </div>
+
+      <!-- 5. Community -->
+      <div class="pane pane-community" data-id="community">
+        <div class="pane-bg" style="background-image: url('assets/community.png'); background-color: #333;"></div>
+        <div class="pane-content">
+          <h2>Community.</h2>
+          <p>Creators uniting for clearer standards.</p>
+        </div>
+      </div>
+
+      <!-- 6. How it works -->
+      <div class="pane pane-how" data-id="how">
+        <div class="pane-bg" style="background-image: url('assets/how-it-works.png'); background-color: #333;"></div>
+        <div class="pane-content">
+          <h2>How it works.</h2>
+          <p>One time. That's it.</p>
+        </div>
+      </div>
+
+      <!-- 7. News -->
+      <div class="pane pane-news" data-id="news">
+        <div class="pane-bg" style="background-image: url('assets/news.png'); background-color: #333;"></div>
+        <div class="pane-content">
+          <h2>News.</h2>
+          <p>Momentum in motion.</p>
+        </div>
+      </div>
+
+      <!-- 8. Why Art -->
+      <div class="pane pane-why" data-id="why">
+        <div class="pane-bg" style="background-image: url('assets/why-art.png'); background-color: #333;"></div>
+        <div class="pane-content">
+          <h2>Why art.</h2>
+          <p>Because credit matters.</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-body" id="modal-body">
+        <!-- Content will be injected here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden Content Data -->
+  <script type="application/json" id="content-data">
+        {
+            "protect": {
+                "title": "Protect Art.",
+                "content": "<p><strong>Art is not content. It is intellectual property.</strong></p><p>United Creatives was built on a simple principle: if creative work generates value, it must be protected, documented, and licensed properly. Every photograph, illustration, painting, or digital artwork represents time, technical skill, creative judgment, and professional investment. Yet in the digital era, creative works are copied, reposted, reused, and monetized without permission at scale.</p><p>We provide creators with the infrastructure to prevent that.</p><p>United Creatives combines structured licensing tools, enforceable digital agreements, monitoring support, and rights documentation into one integrated system. From the moment your work is uploaded, it becomes part of a legally structured ecosystem designed to preserve ownership, clarify usage rights, and create a defensible position in case of infringement.</p><p>Protection is not reactionary.<br>Protection is structural.</p><p>We don’t just respond to misuse.<br>We build systems that reduce it.</p>"
+            },
+            "see": {
+                 "title": "See your art.",
+                 "content": "<p><strong>If you cannot see where your work is used, you cannot control it.</strong></p><p>Digital distribution is powerful—but it also fragments ownership visibility. Images travel across platforms, websites, publications, advertising campaigns, and third-party networks within seconds. Attribution is often removed. Context is lost. Licensing agreements are ignored.</p><p>United Creatives provides structured visibility.</p><p>Through monitoring mechanisms and structured documentation processes, creators gain insight into where their work appears online. When a potential unauthorized use is detected, the platform supports documentation workflows that preserve evidence: timestamps, URLs, screenshots, file comparisons, and contextual analysis.</p><p>This is critical.</p><p>Because in rights enforcement, documentation is leverage.</p><p>The ability to demonstrate:<ul><li>Original ownership</li><li>Date of publication</li><li>License status</li><li>Scope of granted rights</li><li>Nature of unauthorized usage</li></ul></p><p>is what transforms suspicion into enforceable claim.</p><p>Seeing your art is the first step.<br>Controlling it is the next.</p>"
+            },
+            "gallery": {
+                "title": "Gallery.",
+                "content": "<p><strong>A portfolio shows your work.<br>A gallery within United Creatives protects it.</strong></p><p>Your gallery is not just visual presentation. It is a structured licensing surface.</p><p>Each uploaded artwork can be connected to:<ul><li>Defined license types (Royalty Free, Rights Managed, Exclusive, Non-Exclusive)</li><li>Usage scopes (Print, Digital, Editorial, Commercial, Broadcast)</li><li>Territorial restrictions</li><li>Duration limits</li><li>Modification rights</li><li>Attribution requirements</li><li>Structured pricing</li></ul></p><p>Instead of informal agreements via email or messages, licenses are generated through legally structured forms that automatically produce standardized contracts. These contracts can be digitally signed and downloaded as legally binding PDF documents — before and after signature.</p><p>Every license becomes:<ul><li>Traceable</li><li>Documented</li><li>Timestamped</li><li>Contractually defined</li></ul></p><p>The gallery becomes your controlled distribution channel — not just a display wall.</p><p>Professional creators do not 'send files.'<br>They grant rights under defined conditions.</p>"
+            },
+            "movement": {
+                "title": "The movement.",
+                "content": "<p>The creative economy has normalized unlicensed usage for too long.</p><p>“Just reposted.”<br>“Found on Google.”<br>“No credit available.”<br>“Fair use.”</p><p>These phrases have become excuses for systemic erosion of creators’ rights.</p><p>United Creatives exists as part of a broader shift — a movement toward structured respect.</p><p>We advocate for a professional standard where:<ul><li>Usage requires permission.</li><li>Permission requires documentation.</li><li>Documentation defines enforceable terms.</li><li>Violations trigger structured response.</li></ul></p><p>This is not about aggression.<br>It is about normalization of proper licensing.</p><p>The movement is not anti-sharing.<br>It is anti-exploitation.</p><p>When creators unite under shared standards — pricing transparency, licensing clarity, enforcement readiness — the market adjusts. Clients learn expectations. Platforms adapt. Professional respect increases.</p><p>Protect art. Together.</p>"
+            },
+            "community": {
+                "title": "Community.",
+                "content": "<p><strong>Rights protection is not only legal. It is collective.</strong></p><p>Creators often face infringement alone, unsure how to proceed:<ul><li>Should I send a message?</li><li>Should I issue an invoice?</li><li>Should I ignore it?</li><li>Is enforcement worth the effort?</li></ul></p><p>United Creatives creates a professional environment where creators exchange knowledge, strategies, and practical experiences.</p><p>Inside the community, members gain:<ul><li>Access to licensing best practices</li><li>Insights into pricing strategies</li><li>Structured contract templates</li><li>Enforcement escalation workflows</li><li>Real case learnings from resolved disputes</li></ul></p><p>We believe knowledge reduces hesitation.<br>Structure reduces fear.</p><p>The more creators operate professionally, the stronger the overall ecosystem becomes.</p>"
+            },
+            "how": {
+                "title": "How it works.",
+                "content": "<p><strong>One system. Complete workflow.</strong></p><h3>1. Upload & Structure</h3><p>Upload your artwork and define usage parameters. Each work becomes part of a structured licensing framework.</p><h3>2. Define Rights</h3><p>Select license type, duration, region, exclusivity, editing permissions, attribution rules, and pricing.</p><h3>3. Generate Contract</h3><p>The system generates a legally structured agreement based on your inputs — or allows you to upload your own standard contract.</p><h3>4. Digital Signature</h3><p>Both parties sign electronically. The agreement becomes binding. The signed PDF is archived and downloadable at any time.</p><h3>5. Manage Clients</h3><p>All customers are stored in a structured CRM-like system:<ul><li>Active licenses</li><li>Expiring licenses</li><li>Revenue history</li><li>Renewal tracking</li><li>Communication logs</li></ul></p><h3>6. Monitor & Enforce</h3><p>When unauthorized use is detected:<ul><li>Document evidence</li><li>Send structured reminder or licensing offer</li><li>Escalate if required</li></ul></p><p>The workflow is built to move from prevention to documentation to enforcement — seamlessly.</p><p>Professional protection is not fragmented.<br>It is systematic.</p>"
+            },
+            "news": {
+                "title": "News.",
+                "content": "<p><strong>Creative protection is evolving rapidly.</strong></p><p>Legal frameworks, platform policies, AI image scraping, automated content replication — the environment is changing. United Creatives tracks these developments and translates them into actionable updates.</p><p>In News, you’ll find:<ul><li>Platform improvements</li><li>Legal-tech enhancements</li><li>Enforcement success stories</li><li>Case breakdowns</li><li>Policy changes affecting creators</li><li>Community milestones</li></ul></p><p>Transparency builds trust.</p><p>Momentum builds legitimacy.</p>"
+            },
+            "why": {
+                "title": "Why art.",
+                "content": "<p><strong>Because credit is not optional.<br>Because consent is not implied.<br>Because creative labor has economic value.</strong></p><p>Art shapes culture. It informs journalism. It sells products. It builds brands. It documents history. It inspires movements.</p><p>Yet the creators behind it are often invisible once the image circulates.</p><p>United Creatives restores that visibility through structured licensing and enforceable documentation.</p><p>When use is licensed:<ul><li>Creators are credited.</li><li>Terms are respected.</li><li>Revenue is traceable.</li><li>Value is preserved.</li></ul></p><p>When use is not licensed:<ul><li>Evidence exists.</li><li>Documentation exists.</li><li>Enforcement paths exist.</li></ul></p><p>We do not romanticize protection.<br>We operationalize it.</p><p>Art deserves admiration.<br>Creators deserve control.</p>"
+            }
+        }
+    </script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
