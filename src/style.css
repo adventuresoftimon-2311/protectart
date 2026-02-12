@@ -313,6 +313,77 @@ header p {
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+/* Light Mode Overrides */
+body.light-mode {
+  --color-bg: #ffffff;
+  --color-text: #0a0a0a;
+  --color-pane-bg: #f4f4f4;
+}
+
+body.light-mode .pane {
+  border-color: #ddd;
+}
+
+body.light-mode .pane:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
+
+body.light-mode .pane-bg {
+  filter: grayscale(100%) brightness(1.2);
+  /* Adjust for light mode */
+}
+
+body.light-mode .modal-content {
+  background: #fff;
+  color: #0a0a0a;
+  border-color: #ddd;
+}
+
+body.light-mode .modal-body p,
+body.light-mode .modal-body ul {
+  color: #333;
+}
+
+body.light-mode .modal-close {
+  color: #0a0a0a;
+}
+
+body.light-mode header p {
+  color: #555;
+}
+
+
+/* Controls */
+.controls {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  gap: 1rem;
+}
+
+.control-btn {
+  background: transparent;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.control-btn:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+@media (max-width: 768px) {
+  .controls {
+    top: 1rem;
+    right: 1rem;
+  }
 }
