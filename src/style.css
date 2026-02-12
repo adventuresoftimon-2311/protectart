@@ -317,22 +317,47 @@ header p {
 body.light-mode {
   --color-bg: #ffffff;
   --color-text: #0a0a0a;
-  --color-pane-bg: #f4f4f4;
+  /* Pane background remains dark-ish or we explicitly set it to match dark mode look if desired,
+     but user said "tiles exactly like in dark mode".
+     In dark mode: --color-pane-bg is #1a1a1a.
+     So we DO NOT change --color-pane-bg here, or we enforce it.
+  */
 }
 
 body.light-mode .pane {
-  border-color: #ddd;
+  /* Enforce white text on panes in light mode */
+  color: #f0f0f0;
+  border-color: #333;
+  /* Keep dark border or make it fit? User said "exactly like dark mode". */
 }
 
 body.light-mode .pane:hover {
-  background-color: #e0e0e0;
-  border-color: #bbb;
+  background-color: #222;
+  /* Dark hover */
 }
 
 body.light-mode .pane-bg {
-  filter: grayscale(100%) brightness(1.2);
-  /* Adjust for light mode */
+  filter: grayscale(100%);
+  /* Reset filter, no brightness boost needed if we want dark mode look */
+  opacity: 0.4;
 }
+
+body.light-mode .pane:hover .pane-bg {
+  opacity: 0.6;
+}
+
+body.light-mode header h1,
+body.light-mode header p {
+  color: #0a0a0a;
+  /* Explicitly black header */
+}
+
+/* Modal should probably stay dark if "tiles" are dark? Or standard white modal?
+   User only specified "tiles". Let's assume standard behavior for modal (white in light mode)
+   UNLESS they meant the modal is also a tile.
+   "white mode, die kacheln sollen genau wie im darkmode sein" -> specifically "kacheln" (tiles).
+   I'll keep the modal white for now as implemented previously, unless it looks weird.
+*/
 
 body.light-mode .modal-content {
   background: #fff;

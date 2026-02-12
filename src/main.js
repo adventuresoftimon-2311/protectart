@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // New Feature Controls
     const langToggle = document.getElementById('lang-toggle');
     const themeToggle = document.getElementById('theme-toggle');
-    let currentLang = 'en';
+
+    // Language Detection: Default to German if system is German, else English
+    const userLang = navigator.language || navigator.userLanguage;
+    let currentLang = userLang.startsWith('de') ? 'de' : 'en';
+
     let isLightMode = false;
 
     const translations = {
@@ -35,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         de: {
             "header.title": "Protect Art.",
             "header.subtitle": "A United Creatives Movement.",
-            "protect.title": "Kunst schützen.",
+            "protect.title": "Protect Art.",
             "protect.desc": "Kunst ist kein Content. Sie ist geistiges Eigentum.",
             "see.title": "Sieh deine Kunst.",
             "see.desc": "Wisse, wo deine Arbeit lebt.",
@@ -111,6 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.toggle('light-mode', isLightMode);
         themeToggle.textContent = isLightMode ? '☾' : '☀';
     }
+
+    // Initial text update based on detected language
+    updateTexts();
 
     langToggle.addEventListener('click', () => {
         currentLang = currentLang === 'en' ? 'de' : 'en';
